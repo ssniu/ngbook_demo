@@ -1,0 +1,7 @@
+<div class="container">
+    <app-productrow
+        *ngFor="let singleproduct of productlists"
+        [productr]="singleproduct"
+        (click)="clicked(singleproduct)"
+        [class.selected]="isSelected(singleproduct)"></app-productrow>
+</div>

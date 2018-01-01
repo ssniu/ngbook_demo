@@ -1,0 +1,14 @@
+<div >
+    <h2>Parent component</h2>
+    <button (click)="announce()">Anounce</button>
+    <app-parenttochildviaservice *ngFor="let astronaut of astronauts"
+       [astronaut]="astronaut">
+   </app-parenttochildviaservice>
+   <ul>
+       <li *ngFor="let event of history">{{event}}
+       </li>
+   </ul>
+   <p appHighlight>High light</p>
+   <p appHighlight [highlightColor]="'orange'">highlight</p>
+   
+</div>

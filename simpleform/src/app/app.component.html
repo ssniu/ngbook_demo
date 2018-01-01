@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+    <h2>Form demo</h2>
+    <form #f="ngForm"
+        (ngSubmit)="onSubmit(f.value)">
+        <div class="row">
+            <label class="col-md-2">Username:</label>
+            <input type="text"
+                placeholder="username"
+                name="username"
+                [(ngModel)]="username"
+            >{{username}}
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<div class="container">
+    <app-formbuilderdemo></app-formbuilderdemo>
+</div>

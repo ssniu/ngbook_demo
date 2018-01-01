@@ -1,0 +1,9 @@
+<div class="container">
+    <ul>
+        <li *ngFor="let name of humans; let i = index">
+            {{name.name}} -- {{i}} -- {{name.age}}
+            <p *ngIf="humans.length > 3">more than 3 humanbeings</p>
+        </li>
+
+    </ul>
+</div>

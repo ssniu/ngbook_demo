@@ -1,0 +1,20 @@
+<div class="container">
+    <input (keyup)="onKey($event)">
+    <p>{{values}}</p>
+    <hr/>
+    <input (keyup)="onKey2($event)">
+    <p>{{values2}}</p>
+    <hr/>
+    <input #box1 (keyup)="0">
+    <p>{{box1.value}}</p>
+    <hr/>
+    <input #box2 (keyup)="onKey3(box2.value)">
+    <p>{{values3}}</p>
+    <!-- Enter to stop the input -->
+    <hr/>
+    <input #box3 (keyup.enter)="onEnter(box3.value)">
+    <p>{{values4}}</p>
+    <h3>bind blur and enter events</h3>
+    <input #box4 (keyup.enter)="update(box4.value)" (blur)="update(box4.value)">
+    <p>{{value5}}</p>
+</div>

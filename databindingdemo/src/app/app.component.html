@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+        <app-fordemo></app-fordemo>
+        <app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event">
+        </app-sizer>
+    <!--<app-sizer [(size)]="fontSizePx"></app-sizer>
+<div [style.font-size.px]="fontSizePx">Resizable Text</div>-->
+        <button (click)="newMinor()">{{minor}}</button>
+        <button (click)="newMajor()">{{major}}</button>
+    <app-childcom [major]= "major" [minor]="minor" (onVoted)="onVoted($event)"></app-childcom>
+    <h3>Agree: {{agreed}}, Disagree: {{disagreed}}</h3>
+</div>
